@@ -1,0 +1,25 @@
+Here is the analysis its:
+
+Task0.py:
+
+This script reads data from 'texts.csv' and 'calls.csv' files and extracts information from the first record of texts and the last record of calls.
+The time complexity is O(1) because it involves basic operations to access specific records.
+Task1.py:
+
+This script counts the number of different telephone numbers in the records by creating a set to store unique numbers and iterating through the 'texts' and 'calls' data.
+The time complexity is O(n) as it iterates through the 'texts' and 'calls' data to count the unique telephone numbers.
+Task2.py:
+
+This script finds the telephone number that spent the longest time on the phone during September 2016. It uses a dictionary to keep track of the total time for each number and iterates through the 'calls' data to calculate the total time.
+The time complexity is O(n) because it iterates through the 'calls' data once.
+Task3.py:
+
+Part A of the script first creates a list of calls made by Bangaloreans and extracts area codes dialed by Bangaloreans. It then sorts and prints the unique area codes.
+Part B calculates the percentage of calls from fixed lines in Bangalore to other fixed lines in Bangalore.
+The complexity of Part A is O(nlogn) due to sorting the area codes, and the complexity of Part B is O(n).
+The overall complexity of the entire algorithm is determined by the sorting, so it's O(nlogn).
+Task4.py:
+
+This script identifies possible telemarketers by comparing outgoing calls, incoming calls, outgoing texts, and incoming texts. It creates a set of possible telemarketers and then prints them in lexicographic order.
+The time complexity is O(n) as it iterates through the 'calls' and 'texts' data and O(nlogn) for sorting and printing the telemarketers.
+The overall time complexity for these scripts is primarily determined by the most time-consuming operations, which are iterating through the data (O(n)) and, in some cases, sorting the data (O(nlogn)).

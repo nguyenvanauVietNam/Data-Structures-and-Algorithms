@@ -1,0 +1,22 @@
+Problem 5: Autocomplete with Tries
+
+Ananlysis:
+The provided code defines a Trie data structure for storing and searching words. Here's a complexity analysis of the code:
+1.	TrieNode Class:
+	•	The TrieNode class represents a single node in the Trie.
+	•	The __init__ method initializes the node with an empty dictionary to store children nodes and a boolean variable to mark the end of a word.
+	•	The insert method inserts a character as a child node in the Trie, creating a new TrieNode object if the character does not already exist in the children dictionary.
+	•	Both the __init__ and insert methods have constant time complexity, O(1), because they involve simple dictionary operations and attribute assignments.
+2.	Trie Class:
+	•	The Trie class represents the Trie data structure and is composed of TrieNode objects.
+	•	The __init__ method initializes the Trie with a root node.
+	•	The insert method inserts a word into the Trie, iterating through each character of the word and inserting them one by one into the Trie. This method has a time complexity of O(m), where 'm' is the length of the word being inserted.
+	•	The find method finds the Trie node that represents a given prefix by following the path in the Trie. The time complexity of this method is O(n), where 'n' is the length of the prefix.
+3.	suffixes Method:
+	•	The suffixes method is a recursive function that collects all suffixes for complete words below a given node in the Trie.
+	•	It iterates through the children of the current node and appends suffixes to a list whenever it reaches the end of a word.
+	•	The time complexity of this method depends on the number of nodes and complete words in the Trie. In the worst case, where there are 'k' complete words and 'n' nodes in the Trie, the time complexity is O(n + k).
+In summary, the code's time complexity can be analyzed as follows:
+	•	Inserting a word into the Trie: O(m), where 'm' is the length of the word.
+	•	Finding a prefix in the Trie: O(n), where 'n' is the length of the prefix.
+	•	Collecting suffixes for complete words: O(n + k), where 'n' is the number of nodes and 'k' is the number of complete words in the Trie.

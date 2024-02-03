@@ -1,0 +1,15 @@
+Problem 4: Dutch National Flag Problem
+Given an input array consisting on only 0, 1, and 2, sort the array in a single traversal.
+You're not allowed to use any sorting function that Python provides.
+Note: O(n) does not necessarily mean single-traversal.
+For e.g. if you traverse the array twice, that would still be an O(n) solution but it will not count as single traversal.
+
+Ananlysis:
+This algorithm is known as the "Dutch National Flag" algorithm, and it's used to sort an array containing only the elements 0, 1, and 2. Here's the analysis of its time complexity in English:
+1.	Initialize three pointers (low, mid, and high): These operations take constant time, O(1).
+2.	While loop: The while loop iterates through the elements of the input list once. In the worst case, it needs to go through all the elements in the list, which takes O(n) time, where n is the length of the input list.
+3.	Inside the while loop:
+	•	Swapping elements: The swapping operations (input_list[low], input_list[mid] = input_list[mid], input_list[low] and input_list[mid], input_list[high] = input_list[high], input_list[mid]) take constant time, O(1), for each swap.
+	•	Incrementing pointers: Incrementing the low and mid pointers and decrementing the high pointer is done in constant time, O(1), for each operation.
+4.	The overall time complexity of the algorithm is O(n) in the worst case, where n is the length of the input list. This is because the algorithm processes each element in the input list once.
+So, the time complexity of this "sort_012" algorithm is O(n), making it a linear time algorithm.

@@ -1,0 +1,20 @@
+Problem 3: Rearrange Array Digits
+Rearrange Array Elements so as to form two number such that their sum is maximum. Return these two numbers. You can assume that all array elements are in the range [0, 9]. The number of digits in both the numbers cannot differ by more than 1. You're not allowed to use any sorting function that Python provides and the expected time complexity is O(nlog(n)).
+for e.g. [1, 2, 3, 4, 5]
+The expected answer would be [531, 42]. Another expected answer can be [542, 31]. In scenarios such as these when there are more than one possible answers, return any one.
+
+Ananlysis:
+The provided Python algorithm is a function named rearrange_digits that takes a list of digits as input and rearranges them to form two numbers in such a way that the two resulting numbers have the maximum and second maximum possible values. Here's the English explanation and analysis of the algorithm's complexity:
+1.	Input Validation:
+	•	The function first checks if the input list has a length less than or equal to 1. If so, it returns the input list itself, as no rearrangement is required.
+2.	Merge Sort:
+	•	The algorithm uses the merge sort algorithm to sort the input list. Merge sort is a divide-and-conquer algorithm that recursively divides the list into smaller sublists and then merges them back together in a sorted manner.
+	•	The time complexity of merge sort is O(n log n), where n is the number of elements in the input list.
+3.	Merging Two Sorted Lists:
+	•	The merge function merges two sorted lists into a single sorted list. The time complexity of this operation is O(n), where n is the combined size of the two input lists.
+4.	Splitting and Merging:
+	•	The merge_sort function recursively splits the input list into smaller halves and sorts them using the merge function. This process continues until the base case is reached (a list with 1 or 0 elements).
+5.	Reconstruction of Numbers:
+	•	After sorting the input list, the algorithm constructs two numbers (num1 and num2) by iteratively picking digits from the sorted list. Digits at even indices form num1, and digits at odd indices form num2.
+	•	This step takes O(n) time because it iterates through the sorted list once.
+Overall, the time complexity of the rearrange_digits function is dominated by the merge sort step, which is O(n log n), where n is the number of elements in the input list. The rest of the operations are either constant time or linear in the size of the input list and do not significantly impact the overall complexity.
